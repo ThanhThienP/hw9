@@ -48,6 +48,7 @@
                     </includes>
                     <testIncludes>
                         <include>flyweight/**/*.java</include>
+                        <include>proxy/**/*.java</include>
                     </testIncludes>
                 </configuration>
             </plugin>
