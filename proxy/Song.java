@@ -1,11 +1,11 @@
 package proxy;
 
 public class Song {
-    public Integer id;
-    public String title;
-    public String artist;
-    public String album;
-    public int duration;
+    private Integer id;
+    private String title;
+    private String artist;
+    private String album;
+    private int duration; // in seconds
 
     public Song(Integer id, String title, String artist, String album, int duration) {
         this.id = id;
@@ -15,8 +15,29 @@ public class Song {
         this.duration = duration;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public String getAlbum() {
+        return album;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
     @Override
     public String toString() {
-        return title + " by " + artist + " (" + album + ") - " + duration + "s";
+        return String.format("Song[ID=%d, Title='%s', Artist='%s', Album='%s', Duration=%ds]",
+                id, title, artist, album, duration);
     }
 }

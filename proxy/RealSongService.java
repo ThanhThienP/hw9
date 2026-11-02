@@ -12,6 +12,11 @@ public class RealSongService implements SongService {
             Thread.sleep(1000);
         } catch (Exception e) {
         }
+        for (Song s : database) {
+            if (s.getId().equals(songID)) {
+                return s;
+            }
+        }
         return null;
     }
 
@@ -21,7 +26,13 @@ public class RealSongService implements SongService {
             Thread.sleep(1000);
         } catch (Exception e) {
         }
-        return new ArrayList<>();
+        List<Song> results = new ArrayList<>();
+        for (Song s : database) {
+            if (s.getTitle().equalsIgnoreCase(title)) {
+                results.add(s);
+            }
+        }
+        return results;
     }
 
     @Override
@@ -30,6 +41,12 @@ public class RealSongService implements SongService {
             Thread.sleep(1000);
         } catch (Exception e) {
         }
-        return new ArrayList<>();
+        List<Song> results = new ArrayList<>();
+        for (Song s : database) {
+            if (s.getAlbum().equalsIgnoreCase(album)) {
+                results.add(s);
+            }
+        }
+        return results;
     }
 }

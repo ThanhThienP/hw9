@@ -14,5 +14,19 @@ public class Driver {
         SongService proxy = new SongServiceProxy(server);
 
         System.out.println(server);
+
+        System.out.println("searchById:");
+        System.out.println(proxy.searchById(2));
+        System.out.println(proxy.searchById(2));
+
+        System.out.println("\n searchByTitle");
+        System.out.println(proxy.searchByTitle("BIRDS OF A FEATHER"));
+        System.out.println(proxy.searchByTitle("BIRDS OF A FEATHER"));
+
+        System.out.println("\nsearchByAlbum");
+        System.out.println(proxy.searchByAlbum("Short n' Sweet"));
+        System.out.println(proxy.searchByAlbum("Short n' Sweet"));
+
+        System.out.println(proxy.searchByAlbum("Album X"));
     }
 }
