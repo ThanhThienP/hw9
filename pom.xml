@@ -45,6 +45,9 @@
                     <includes>
                         <include>flyweight/**/*.java</include>
                     </includes>
+                    <testIncludes>
+                        <include>flyweight/**/*.java</include>
+                    </testIncludes>
                 </configuration>
             </plugin>
             <plugin>
