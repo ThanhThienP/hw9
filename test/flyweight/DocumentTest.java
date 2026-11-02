@@ -11,7 +11,7 @@ public class DocumentTest {
     public void testAddCharacter() {
         Document doc = new Document();
         CharacterPropertiesFactory factory = new CharacterPropertiesFactory();
-        CharacterProperties props = factory.getProperties("Arial", "Red", 12);
+        CharacterProperties props = factory.getProperties("Arial", 12, "Red");
 
         doc.addCharacter(new Character('H', props));
         assertEquals(1, doc.getCharacters().size());
@@ -21,7 +21,7 @@ public class DocumentTest {
     public void testGetCharacters() {
         Document doc = new Document();
         CharacterPropertiesFactory factory = new CharacterPropertiesFactory();
-        CharacterProperties props = factory.getProperties("Arial", "Red", 12);
+        CharacterProperties props = factory.getProperties("Arial", 12, "Red");
 
         doc.addCharacter(new Character('H', props));
         doc.addCharacter(new Character('i', props));
@@ -35,8 +35,8 @@ public class DocumentTest {
         CharacterPropertiesFactory factory = new CharacterPropertiesFactory();
         Document doc = new Document();
 
-        CharacterProperties arial12Red = factory.getProperties("Arial", "Red", 12);
-        CharacterProperties calibri14Blue = factory.getProperties("Calibri", "Blue", 14);
+        CharacterProperties arial12Red = factory.getProperties("Arial", 12, "Red");
+        CharacterProperties calibri14Blue = factory.getProperties("Calibri", 14, "Blue");
 
         doc.addCharacter(new Character('A', arial12Red));
         doc.addCharacter(new Character('B', calibri14Blue));
@@ -65,7 +65,7 @@ public class DocumentTest {
         CharacterPropertiesFactory factory = new CharacterPropertiesFactory();
         Document doc = new Document();
 
-        CharacterProperties props = factory.getProperties("Arial", "Red", 12);
+        CharacterProperties props = factory.getProperties("Arial", 12, "Red");
         doc.addCharacter(new Character('X', props));
         doc.addCharacter(new Character('Y', props));
 
